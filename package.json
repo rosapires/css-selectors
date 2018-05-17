@@ -1,0 +1,19 @@
+{
+  "name": "css-selectors",
+  "version": "1.0.0",
+  "description": "## fork and clone this repository The html file contains the structure, the scss file a basic layout",
+  "main": "index.js",
+  "scripts": {
+    "myscript": "node-sass -w scss/style.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rosapires/css-selectors.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rosapires/css-selectors/issues"
+  },
+  "homepage": "https://github.com/rosapires/css-selectors#readme"
+}

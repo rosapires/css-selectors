@@ -1,8 +1,9 @@
 $font-stack:    Helvetica, sans-serif;
-$primary-color: #d3a91f;
+$primary-color: #dfd9a1;
 $secondary-color: #141212;
 $width: 100%;
 $space: 20px;
+$hover-color:#92b992;
 
 html, body, p , ul{
     margin: 0;
@@ -18,15 +19,45 @@ html, body, p , ul{
   }
   ul {
     list-style: none;
+    
 
     li {
         margin: 0;
         display: inline;
+
+        &:nth-child(1) a:hover{
+            background-color: #3e3edd;
+        }
+        &:nth-child(2) a:hover{
+            background-color: #3edd4b;
+        }
+
+        &:nth-child(3) a:hover{
+            background-color: #3e3edd;
+        }
+
+        &:nth-child(4) a:hover{
+            background-color: #3e90dd;
+        }
+
+        &:nth-child(5) a:hover{
+            background-color: #f54f0d;
+        }
+
+        &:nth-child(6) a:hover{
+            background-color: #dd3e9b;
+        }
         a {
             text-decoration: none;
             color: $secondary-color;
             background: $primary-color;
             padding: $space/4 $space/2;
+
+            &:hover{
+                background-color: $hover-color;
+                transition: background-color 0.5s ease;
+                
+            }
         }
     }
 }
@@ -35,12 +66,51 @@ article {
     background: grayscale($primary-color);
     color: $secondary-color;
     padding: $space/2;
+    
+    &::first-letter{
+        font-size: 150%;
+    }
+
+    blockquote{
+    
+    &:before {
+        content: '\201C';  
+      }
+    
+    &:after {
+        content: '\201D';
+    }
+}
+
+&:nth-child(4n+2){
+Grid-column: span 3;
+
+}
+
+&:nth-child(4n+3){
+Grid-column: span 3;
+
+}
+&:first-of-type {
+    background-color:#ffffff;
+  }
+  &:last-of-type {
+    background-color:#ffffff;
+  }
+   
+   
+
 }
 main {
     width: $width*.9;
     margin: 0 auto;
-    background: lighten($secondary-color, 10%);
+    background: lighten(saturate(adjust-hue(#141212, 43), 94.74), 51.96);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: $space/2;
+    grid-template-columns: repeat(4, 1fr);
+
+
+
+
   }
